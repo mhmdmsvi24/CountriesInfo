@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS</title>
+
+    <link rel="stylesheet" href="./card.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <nav>
+          <menu>
+            <li id="home-item"><a href="#" class="list-link">Home</a></li>
+            <li><a href="#" class="list-link">API</a></li>
+            <li><a href="#" class="list-link">Doc</a></li>
+            <li><a href="#" class="list-link">About</a></li>
+          </menu>
+
+          <div id="search__bar">
+            <input type="text" name="country-search" id="search__bar--input" />
+
+            <img
+              src="./assets/icons/search_24dp_E8EAED_FILL0_wght200_GRAD0_opsz24.svg"
+              alt="search bar"
+              class="search__bar__icon"
+            />
+          </div>
+        </nav>
+
+        <!-- <div id="serach--overlay">1</div> -->
+      </header>
+      <!--  -->
+      <main>
+        <div class="countries__wrapper">
+          <!-- <div class="countries__card">
+            <div class="card__img">
+              <img />
+            </div>
+            <div class="card__body">
+              <div class="card__name">Name: <span>Iran</span></div>
+              <div class="card__population">Population: <span>85M</span></div>
+              <div class="card__lang">Language: <span>Persian</span></div>
+              <div class="card__currency">Currency: <span>Rial</span></div>
+              <div class="card__geo">Location: <span>Middle-East</span></div>
+              <div class="card__timezone">Time zone: <span>GMT 3:30</span></div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="country__overlay">
+          <div class="country__number">0</div>
+          <div id="scroll__top"></div>
+        </div>
+      </main>
+      <!--  -->
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>
