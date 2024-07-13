@@ -1,0 +1,57 @@
+@font-face {
+  font-family: poppins;
+  src: url("src/assets/fonts/poppins-medium-webfont.woff2") format(woff2),
+    url("src/assets/fonts/poppins-medium-webfont.woff") format(woff);
+}
+
+html {
+  font-size: 62.5%;
+  font-family: poppins;
+}
+
+body {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.card__body *::selection {
+  background-color: rgba(220, 20, 60, 0.433);
+}
+
+#app {
+  background-image: linear-gradient(45deg, rgb(29, 29, 123), rgb(231, 89, 89));
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 2rem;
+  min-height: 100svh;
+}
+
+main {
+  display: grid;
+  place-items: center;
+}
+
+#scroll__top {
+  flex-basis: 50%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-left: 1px solid lightgray;
+  cursor: pointer;
+}
