@@ -6,6 +6,7 @@ const searchBar = document.getElementById("search__bar--input");
 // Fetch the API
 function FetchCountries(url) {
   const req = new XMLHttpRequest();
+
   req.open("GET", url);
   req.send();
 
@@ -123,7 +124,7 @@ function creatComponent(name) {
     request = FetchCountries(`https://restcountries.com/v3.1/name/${name}`);
 
     request.onload = () => {
-      if (request.status >= 200 && request.status < 300) {
+      if (request.status === 200) {
         data = extractCountryData(JSON.parse(request.responseText)[0]);
         html = generateCountryHtml(data, true);
 
@@ -146,11 +147,12 @@ function creatComponent(name) {
 
     request.onload = () => {
       if (request.status >= 200 && request.status < 300) {
+        printComponent("", cardWrapper, true);
         data = JSON.parse(request.responseText);
         data.map((country) => {
           html = generateCountryHtml(country);
-          printCounter(data.length);
           printComponent(html, cardWrapper);
+          printCounter(data.length);
         });
       }
     };
